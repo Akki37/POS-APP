@@ -213,8 +213,8 @@ function DashBoard(props) {
                     <Statistic
                         title="Yesterday"
                         value={yestTotalAmount()}
-                        valueStyle={{ color: yestTotalAmount() > TodayTotalAmount ? '#3f8600' : "red" }}
-                        prefix={ yestTotalAmount() > TodayTotalAmount ? <ArrowUpOutlined/> : <ArrowDownOutlined/>}
+                        valueStyle={{ color: yestTotalAmount() > TodayTotalAmount() ? '#3f8600' : "red" }}
+                        prefix={ yestTotalAmount() > TodayTotalAmount() ? <ArrowUpOutlined/> : <ArrowDownOutlined/>}
                         suffix="/-"
                     />
                     </Card>
@@ -222,8 +222,8 @@ function DashBoard(props) {
                     <Statistic
                         title="Today"
                         value={TodayTotalAmount()}
-                        valueStyle={{ color: yestTotalAmount() > TodayTotalAmount ? "red" : '#3f8600' }}
-                        prefix={ yestTotalAmount() > TodayTotalAmount ? <ArrowDownOutlined/> : <ArrowUpOutlined/> }
+                        valueStyle={{ color:  TodayTotalAmount() > yestTotalAmount()  ? '#3f8600' : "red"   }}
+                        prefix={ TodayTotalAmount() > yestTotalAmount()   ? <ArrowUpOutlined/> :<ArrowDownOutlined/>}
                         suffix="/-"
                     />
                     </Card>
