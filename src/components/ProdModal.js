@@ -16,7 +16,7 @@ function ProdModal(props) {
     const draggleRef = React.createRef()
 
 useEffect(()=>{
-    axios.get(`http://dct-billing-app.herokuapp.com/api/products/${id}`,
+    axios.get(`https://dct-billing-app.herokuapp.com/api/products/${id}`,
         {
             "headers":{
                 "Authorization" : `Bearer ${localStorage.getItem("pos_token")}`
