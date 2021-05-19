@@ -1,0 +1,42 @@
+.account_box{
+position: relative;
+background-color: white;
+width: 98%;
+border-radius: 10px;
+margin: 10px 1%;
+padding: 10px 0 20px;
+box-shadow: 5px 5px 10px rgba(88, 88, 88, 0.664) ;
+}
+
+.Account{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: rgb(255,139,91);
+    font-weight: bold;
+}
+.createdAt{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 10px;
+    padding: 0 20px;
+    color:rgb(197, 70, 15) ;
+
+}
+.user{
+position: relative;
+display: flex;
+align-items: center;
+width: 100%;
+min-height: 50px;
+font-size: 30px;
+padding: 0 100px;
+color: rgb(255,139,91);
+}

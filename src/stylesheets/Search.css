@@ -1,0 +1,11 @@
+.searchBarAll{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    padding: 0 50px;
+}
+.searchInput{
+    position: relative;
+    width: 400px;
+    border-radius: 20px;
+}

@@ -1,0 +1,53 @@
+.dashboard{
+    position: relative;
+    width: 100%;
+    background: white;
+}
+.businessName{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 100px;
+    color: rgb(255,139,91);
+    font-weight: 400;
+    font-variant: small-caps;
+    padding: 0 30px;
+    background-color: white;
+}
+.chartBox{
+    position: relative;
+    width: 100%;
+    height: 600px;
+   
+}
+.cardContainer{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 20px;
+    flex-wrap: wrap;
+}
+.cards{
+    width: 30%;
+    margin: 0 0 60px ;
+    box-shadow: 2px 2px 30px rgb(238, 238, 238);
+    transition: transform 300ms;
+}
+.cards:hover{
+    transform: scale(1.05,1.05);
+}
+.cardH1{
+    color: rgb(255,139,91);
+    font-size: 50px;
+    font-weight:600;
+    margin:0
+}
+.cardspan{
+    color: rgb(255,139,91);
+    font-size: 30px;
+    font-weight:600;
+    margin:0
+}
