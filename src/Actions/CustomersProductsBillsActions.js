@@ -5,7 +5,7 @@ import axios from "axios"
 // const store = configStore()
 export const startFetchingAccount = () => {
     return dispatch => {
-        axios.get("http://dct-billing-app.herokuapp.com/api/users/account",
+        axios.get("https://dct-billing-app.herokuapp.com/api/users/account",
             {
                 "headers": {
                     "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -39,7 +39,7 @@ export const account_net_error = (n) => {
 
 export const startFetchingCustomers = () => {
     return (dispatch) => {
-        axios.get("http://dct-billing-app.herokuapp.com/api/customers",
+        axios.get("https://dct-billing-app.herokuapp.com/api/customers",
             {
                 "headers": {
                     "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -71,7 +71,7 @@ export const customers_net_error = (n) => {
     //-----------Edit Customer by Id-----------//
     export const EditCustomerBy_Id =(data,id,edited)=>{
     return dispatch=>{
-    axios.put(`http://dct-billing-app.herokuapp.com/api/customers/${id}`,data,
+    axios.put(`https://dct-billing-app.herokuapp.com/api/customers/${id}`,data,
     {
         "headers": {
             "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -92,7 +92,7 @@ export const customers_net_error = (n) => {
           //-----------Add customer-----------//
 export const addcustomer = (n,resetForm) => {
     return dispatch => {
-        axios.post("http://dct-billing-app.herokuapp.com/api/customers",n,
+        axios.post("https://dct-billing-app.herokuapp.com/api/customers",n,
             {
                 "headers": {
                     "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -115,7 +115,7 @@ export const addcustomer = (n,resetForm) => {
            //-----------Remove customer-----------//
 export const removeCustomer = (id) => {
     return dispatch => {
-        axios.delete(`http://dct-billing-app.herokuapp.com/api/customers/${id}`,
+        axios.delete(`https://dct-billing-app.herokuapp.com/api/customers/${id}`,
             {
                 "headers": {
                     "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -136,7 +136,7 @@ export const removeCustomer = (id) => {
 
 export const startFetchingProducts = () => {
     return dispatch => {
-        axios.get("http://dct-billing-app.herokuapp.com/api/products",
+        axios.get("https://dct-billing-app.herokuapp.com/api/products",
             {
                 "headers": {
                     "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -168,7 +168,7 @@ export const products_net_error = (n) => {
             //-----------Editproduct by Id-----------//
 export const EditProductBy_Id =(data,id,edited)=>{
     return dispatch=>{
-        axios.put(`http://dct-billing-app.herokuapp.com/api/products/${id}`,data,
+        axios.put(`https://dct-billing-app.herokuapp.com/api/products/${id}`,data,
         {
             "headers": {
                 "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -188,7 +188,7 @@ export const EditProductBy_Id =(data,id,edited)=>{
             //-----------Add product-----------//
 export const addProduct = (n,resetForm) => {
     return dispatch => {
-        axios.post("http://dct-billing-app.herokuapp.com/api/products",n,
+        axios.post("https://dct-billing-app.herokuapp.com/api/products",n,
             {
                 "headers": {
                     "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -207,7 +207,7 @@ export const addProduct = (n,resetForm) => {
           //-----------Remove Product-----------//
 export const removeProduct = (id) => {
     return dispatch => {
-        axios.delete(`http://dct-billing-app.herokuapp.com/api/products/${id}`,
+        axios.delete(`https://dct-billing-app.herokuapp.com/api/products/${id}`,
             {
                 "headers": {
                     "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -229,7 +229,7 @@ export const removeProduct = (id) => {
 //------------------------------------------------------------------------------------//
 export const startFetchingBills = () => {
     return dispatch => {
-        axios.get("http://dct-billing-app.herokuapp.com/api/bills",
+        axios.get("https://dct-billing-app.herokuapp.com/api/bills",
             {
                 "headers": {
                     "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -260,7 +260,7 @@ export const bills_net_error = (n) => {
              //-----------Add Bill-----------//
 export const addBill = (n,setAddProduct,posted) => {
     return dispatch => {
-        axios.post("http://dct-billing-app.herokuapp.com/api/bills", n,
+        axios.post("https://dct-billing-app.herokuapp.com/api/bills", n,
             {
                 "headers": {
                     "Authorization": `Bearer ${localStorage.getItem("pos_token")}`
@@ -288,7 +288,7 @@ export const  addbillingCustomer = (n)=>{
              //-----------Remove Bill-----------//
 export const removeBill = (id) => {
     return dispatch => {
-        axios.delete(`http://dct-billing-app.herokuapp.com/api/bills/${id}`,
+        axios.delete(`https://dct-billing-app.herokuapp.com/api/bills/${id}`,
             {
                 "headers": {
                     "Authorization": `Bearer ${localStorage.getItem("pos_token")}`

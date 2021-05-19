@@ -2,7 +2,7 @@ import axios from "axios"
 //------------------------Registration--------------------------//
 export  const startRegisterUser =(n,registration_done)=>{
     return dispatch =>{
-        axios.post("http://dct-billing-app.herokuapp.com/api/users/register",n)
+        axios.post("https://dct-billing-app.herokuapp.com/api/users/register",n)
         .then((response)=>{
             const result = response.data
                dispatch(registration_net_error(""))
@@ -35,7 +35,7 @@ export const registration_net_error =(n)=>{
 //------------------------Log In--------------------------//
 export  const startLoginUser =(n,loggedIn_done)=>{
     return dispatch =>{
-        axios.post("http://dct-billing-app.herokuapp.com/api/users/login",n)
+        axios.post("https://dct-billing-app.herokuapp.com/api/users/login",n)
         .then((response)=>{
             const result = response.data
             dispatch(login_net_error(""))
