@@ -18,17 +18,18 @@ function Account(props) {
             })
         }
     },[])
+    const styleDivider = {fontSize:"15px",fontWeight:"600",margin:0,padding:0}
     return (
         <div className="account_box">
             <div className="Account">Account </div>
             <p className="createdAt">created on-{new Date(account.createdAt).toLocaleDateString()}<br/> last updated -{new Date(account.updatedAt).toLocaleDateString()}</p>
-            <Divider orientation="left" style={{fontSize:"15px",fontWeight:"600",margin:0,padding:0}}>User Name</Divider>
+            <Divider orientation="left" style={styleDivider}>User Name</Divider>
             <div className="user ">{account.username}</div>
-            <Divider orientation="left" style={{fontSize:"15px",fontWeight:"600",margin:0,padding:0}}>Email</Divider>
+            <Divider orientation="left" style={styleDivider}>Email</Divider>
             <div className="user ">{account.email}</div>
-            <Divider orientation="left" style={{fontSize:"15px",fontWeight:"600",margin:0,padding:0}}>Business Name</Divider>
+            <Divider orientation="left" style={styleDivider}>Business Name</Divider>
             <div className="user ">{account.businessName}</div>
-            <Divider orientation="left" style={{fontSize:"15px",fontWeight:"600",margin:0,padding:0}}>Address</Divider>
+            <Divider orientation="left" style={styleDivider}>Address</Divider>
             <div className="user ">{account.address}</div>
         </div>
     )

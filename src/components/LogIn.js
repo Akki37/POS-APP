@@ -6,17 +6,18 @@ import swal from 'sweetalert'
 import "../stylesheets/LogIn.css"
 import {Input,Button} from "antd"
 import {MailOutlined ,LockOutlined} from "@ant-design/icons"
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { loginError, login_net_error, startLoginUser } from '../Actions/register_loginActions'
 
 function LogIn(props) {
      const dispatch = useDispatch()
+     let history = useHistory()
      const responseError_login = useSelector(state => state.responseError.login)
      const networkError_login  = useSelector(state => state.networkError.login)
      
     useEffect(()=>{
         if(localStorage.getItem("pos_token")){
-            props.history.push("/main/dashboard")
+            history.push("/main/dashboard")
         }else{
       if(responseError_login){
          swal({
@@ -50,7 +51,7 @@ function LogIn(props) {
             buttons:false,
             timer:1000
         })
-          props.history.push("/main/dashboard")
+          history.push("/main/dashboard")
     }
     const initialValues={
         email:"",

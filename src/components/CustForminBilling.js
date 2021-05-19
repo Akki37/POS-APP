@@ -7,13 +7,16 @@ import "../stylesheets/CustForminBilling.css"
 const {Step} =Steps
 function CustForminBilling(props) {
     const  dispatch = useDispatch()
+    
     const customers = useSelector(state => state.BusinessData.customers)
     const billingCustomer  = useSelector(state => state.BusinessData.billingCustomer)
+
     const[mobile,setMobile]=useState( "")
     const[name  ,  setName]=useState("")
     const[email , setEmail]=useState("")
     const[formError,setFormError]=useState({})
     const[steps,setSteps]=useState(0)
+
     useEffect(()=>{
         if(Object.keys(billingCustomer).length){
             setMobile(billingCustomer.mobile)

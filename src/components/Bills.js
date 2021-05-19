@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import {  useSelector } from 'react-redux'
 import Search from './Search'
 import BillsTable from './BillsTable'
-
 import "../stylesheets/Bills.css"
 import swal from '@sweetalert/with-react'
 import { useHistory } from 'react-router'

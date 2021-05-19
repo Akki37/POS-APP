@@ -17,6 +17,9 @@ const networkErrorReducer = (state=initialNetworkError,action) =>{
         case "ACCOUNT_NET_ERROR":{
             return {...state,account:action.payload}
         }
+        case"RESET":{
+            return {...initialNetworkError}
+        }
         default:{
             return state
         }

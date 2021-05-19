@@ -7,9 +7,6 @@ import { Provider } from 'react-redux';
 import configStore from './store/configStore';
 
 const  store = configStore()
-store.subscribe(()=>{
-  console.log(store.getState())
-})
 ReactDOM.render(
   <BrowserRouter>
   <Provider store={store}> 

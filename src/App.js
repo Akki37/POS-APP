@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { Route } from "react-router";
+import { Route, useHistory } from "react-router";
 import './App.css';
 import { loginDone } from "./Actions/register_loginActions";
 import Home from "./components/Home";

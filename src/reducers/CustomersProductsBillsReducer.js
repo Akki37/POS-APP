@@ -17,6 +17,9 @@ switch(action.type){
     case "BILLINGCUSTOMER":{
         return {...state,billingCustomer:action.payload}
     }
+    case "RESET":{
+        return {...initialDataReport}
+    }
     default:{
         return state
     }

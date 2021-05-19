@@ -65,7 +65,7 @@ function DashBoard(props) {
        return {
              key   :i+1,
              name  :findCust(bill.customer,"name"),
-             mobile: findCust(bill.customer,"mobile"),
+             mobile:findCust(bill.customer,"mobile"),
              items :bill.lineItems.length,
              date  :new Date(bill.createdAt).toLocaleDateString(),
              total :bill.total
@@ -77,16 +77,14 @@ function DashBoard(props) {
        let year = d.getFullYear()
        let month =d.getMonth() 
        let date = d.getDate()
-       let dateObj = `${date-1}/${month<9 ? `0${month+1}`: month+1}/${year}`
+       let dateObj = `${date-1}/${month <9 ? `0${month+1}`: month+1}/${year}`
        const Bills = [...bills]
        Bills.reverse().forEach((bill)=>{
            if( new Date(bill.createdAt).toLocaleDateString() === dateObj){
                sum += bill.total
            }
        })
-       
        return sum
-      
    }
    const TodayTotalAmount=()=>{
        let sum =0

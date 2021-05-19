@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import {Carousel} from "antd"
 import "../stylesheets/Home.css"
+import { useHistory } from 'react-router'
 function Home(props){
+    let history=useHistory()
     useEffect(()=>{
          if(localStorage.getItem("pos_token")){
-             props.history.push("/maincontainer")
+             history.push("/main/dashboard")
          }
     },[])
     return (

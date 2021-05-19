@@ -6,17 +6,18 @@ import * as Yup from "yup"
 import swal from "sweetalert"
 import { useDispatch,useSelector } from 'react-redux'
  import "../stylesheets/RegisterForm.css"
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { registerationError, registration_net_error, startRegisterUser } from '../Actions/register_loginActions'
 
 function RegisterForm(props){
       const dispatch = useDispatch()
+      let history = useHistory()
       const networkError_registration = useSelector(state => state.networkError.registration)
       const responseError_registration = useSelector(state => state.responseError.registration)
    
    useEffect(() => {
        if(localStorage.getItem("pos_token")){
-           props.history.push("/maincontainer")
+           history.push("/main/dashboard")
          }
        else{
             if(responseError_registration){

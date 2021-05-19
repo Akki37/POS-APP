@@ -14,7 +14,7 @@ function CustModal(props) {
     const[bounds,setBounds]    =useState({ left: 0, top: 0, bottom: 0, right: 0 })
 
     const draggleRef = React.createRef()
-useEffect(()=>{
+   useEffect(()=>{
     axios.get(`https://dct-billing-app.herokuapp.com/api/customers/${id}`,
     {
         "headers":{
@@ -25,7 +25,7 @@ useEffect(()=>{
         setCustomer(response.data)
     })
     .catch((err)=>{
-        console.log(err.message)
+        alert(err.message)
     })
 },[id])
 

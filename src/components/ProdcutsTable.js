@@ -12,7 +12,6 @@ function ProdcutsTable(props) {
 
     const dispatch = useDispatch()
     const Products = useSelector(state => state.BusinessData.products)
-
     const[tableData,setData]=useState([])
     
     useEffect(()=>{

@@ -74,3 +74,10 @@ export const login_net_error =(n)=>{
         payload:n
     }
 }
+//---------------Reset----------------
+
+export const reset=()=>{
+    return {
+        type:"RESET"
+    }
+}

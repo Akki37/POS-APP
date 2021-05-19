@@ -3,7 +3,7 @@ import {Link, useHistory} from "react-router-dom"
 import swal from 'sweetalert'
 import { Menu,Dropdown,Breadcrumb  } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginDone } from '../Actions/register_loginActions';
+import { loginDone, reset } from '../Actions/register_loginActions';
 import {UserOutlined,LogoutOutlined} from "@ant-design/icons"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCashRegister} from "@fortawesome/free-solid-svg-icons"
@@ -22,6 +22,7 @@ function NavBar(props) {
                     swal({ text:"Logged Out", icon:"success",timer:1000,buttons:false })
                     dispatch(loginDone(false))
                     history.push("/login")
+                    dispatch(reset())
                                                }});}
 
     const seperator = <span style={{color:"white"}}>|</span>

@@ -11,8 +11,11 @@ import BillListModal from './BillListModal'
 function CustomerBill_List(props) {
     const {type:id} = useParams()
     let history = useHistory()
+
     const[customer,setCustomer] =useState("")
+
     const dispatch = useDispatch()
+
     const BusinessData = useSelector(state => state.BusinessData)
     const bills =BusinessData.bills
 
@@ -40,11 +43,13 @@ function CustomerBill_List(props) {
         })
    }
     },[id])
+
     function TotalBills(_id){
         return (bills.filter((bill)=>{
                return bill.customer === _id
            })).reverse()
        } 
+
     const columns =[
     {title:`Name : ${customer.name}`,
     children:[{title: 'S.no',dataIndex: 'key'},  
@@ -67,7 +72,6 @@ function CustomerBill_List(props) {
 
     const Data=()=>{ 
         let type=id
-        let string = "main/billlist"
         const result = TotalBills(id).map((bill,i)=>{
         return {
                 key: i+1,

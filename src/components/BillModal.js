@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,useRef} from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory, useParams } from 'react-router'
 import axios from 'axios'
 import Draggable from 'react-draggable';
@@ -10,7 +10,7 @@ import "../stylesheets/BillModal.css"
 function BillModal(props) {
     const{id,type,string}= useParams()
               let history= useHistory()
-              const componentRef = useRef();
+
 
     const[visible,setVisible]  =useState(true)
     const[disabled,setDisabled]=useState(true)
@@ -111,7 +111,7 @@ const Data=(data)=>{
       fontWeight:"400",fontSize:"15px",padding:"0 10px",color:"gray"
     }
     return (
-        <Modal ref={componentRef}
+        <Modal 
             width={1000} 
             visible={visible}
             onCancel={handleClose}

@@ -10,7 +10,7 @@ import "../stylesheets/BillModal.css"
 
 function BillListModal(props) {
     const{id,type}= useParams()
-              let history= useHistory()
+        let history= useHistory()
 
     const[visible,setVisible]  =useState(true)
     const[disabled,setDisabled]=useState(true)
@@ -67,20 +67,20 @@ function handleClose(){
 function handlePrint(){
     window.print()
 }
- const onStart = (event, uiData) => {
+ const onStart = (uiData) => {
     const { clientWidth, clientHeight } = window?.document?.documentElement;
     const targetRect = draggleRef?.current?.getBoundingClientRect();
     setBounds({
-        left: -targetRect?.left + uiData?.x,
+         left: -targetRect?.left + uiData?.x,
         right: clientWidth - (targetRect?.right - uiData?.x),
-        top: -targetRect?.top + uiData?.y,
-        bottom: clientHeight - (targetRect?.bottom - uiData?.y),
+          top: -targetRect?.top + uiData?.y,
+       bottom: clientHeight - (targetRect?.bottom - uiData?.y),
     });
 }
     const columns =[{title: 'S.no',dataIndex: 'key'},
     {title: "Product" ,
             children:[{title: 'Name'  ,dataIndex: 'name',key: 'name'},
-                    {title: 'Price',dataIndex: 'price',key: 'price'}]},
+                      {title: 'Price',dataIndex: 'price',key: 'price'}]},
     {title: 'Quantity',dataIndex: 'quantity',width:200 },
     {title: 'Total',dataIndex:'subTotal',width:200},
     ]

@@ -8,6 +8,9 @@ const responseErrorReducer = (state=initialResponseError,action) =>{
         case "LOGIN_ERROR":{
             return{...state,login:action.payload}
         }
+        case"RESET":{
+            return{...initialResponseError}
+        }
         default:{
             return state
         }

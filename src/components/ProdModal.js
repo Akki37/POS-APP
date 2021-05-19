@@ -26,7 +26,7 @@ useEffect(()=>{
         setProduct(response.data)
     })
     .catch((err)=>{
-        console.log(err.message)
+        alert(err.message)
     })
 },[id])
 

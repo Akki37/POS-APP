@@ -101,12 +101,11 @@ function Billing(props) {
                 name    : product.name,
                 price   : product.price,
                 unit    : product.quantity,
-                quantity: (
-                    <Space size="large" >
-                     <Quantity prod={product} />
-                    <Breadcrumb.Separator/>
-                     <DeleteOutlined className="delete" onClick={()=>removeProduct(product._id)}/>
-                    </Space> ),
+                quantity: ( <Space size="large" >
+                            <Quantity prod={product} />
+                            <Breadcrumb.Separator/>
+                            <DeleteOutlined className="delete" onClick={()=>removeProduct(product._id)}/>
+                            </Space> ),
                 total   :`${product.quantity * product.price}/-`.replace(/\B(?=(\d{3})+(?!\d))/g, ','),
             }
           })
