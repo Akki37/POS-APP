@@ -62,7 +62,7 @@ function CustomersTable(props) {
         const footer = ()=> <div style={{fontWeight:"bold",fontSize:"30px",letterSpacing:"2px",fontVariant:"small-caps"}}>Total Customers:{Customers.length}</div>
     return (
         <>
-        <Table columns={columns} bordered dataSource={tableData} scroll={{y:"450px"}} footer={footer} pagination={true}/>
+        <Table columns={columns} bordered dataSource={tableData} scroll={{y:"380px"}} footer={footer} pagination={true}/>
         <Route path="/main/customers/custmodal/:id" exact component={CustModal}/>
         
       </>

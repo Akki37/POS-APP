@@ -44,14 +44,14 @@ function CustomerForm(props) {
         const {values}  = useFormikContext()
         return <>
             {id ?
-                <><Button disabled={!formik.isValid} type="primary"  htmlType="submit">Edit Customer</Button>
-                <Button type="text"  onClick={()=>history.push("/main/customers")}> Cancel </Button></>: 
+                <><Button disabled={!formik.isValid || !formik.dirty} type="primary" className="form_submit" htmlType="submit">Edit Customer</Button>
+                <Button type="default" className="cancelBtn"  onClick={()=>history.push("/main/customers")}> Cancel </Button></>: 
                 customers.some(customer => customer.mobile === values.mobile) ? 
             <div>
-                <Button disabled={true}  type="ghost"            htmlType="submit">Add Customer</Button>
+                <Button disabled={true}  type="ghost" className="form_submit" htmlType="submit">Add Customer</Button>
                 <p className="errorInForm">Already exist</p>
             </div> :
-                <Button disabled={!formik.isValid} type="primary"  htmlType="submit">Add Customer</Button>
+                <Button disabled={!formik.isValid || !formik.dirty} type="primary" className="form_submit"  htmlType="submit">Add Customer</Button>
             }    
                </>
     }

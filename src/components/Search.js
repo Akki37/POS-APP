@@ -51,7 +51,7 @@ function Search(props) {
             }
     return (
         <div className="searchBarAll">
-            <Input type="text" className="searchInput" value={input} prefix={<SearchOutlined />} onChange={handleSearch} placeholder={placeHolder} />
+            <Input type="text" className="searchInput"  value={input} prefix={<SearchOutlined />} onChange={handleSearch} placeholder={placeHolder} />
         </div>
     )
 }

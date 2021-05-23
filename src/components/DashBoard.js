@@ -1,6 +1,6 @@
 import React, { useEffect,useState }  from 'react'
 import {Link} from "react-router-dom"
-import {  useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router';
 import {Line} from "react-chartjs-2"
 import {Card,Table,Statistic,Select} from "antd"
@@ -144,6 +144,10 @@ function DashBoard(props) {
        setMData([...gDataObj])
    }
 
+   const getCurrentMonth=()=>{
+       return months[new Date().getMonth()]
+       
+   }
    const getData=(type)=>{
     if(type === "labels"){
         return monthData.map((data)=>{
@@ -185,12 +189,12 @@ function DashBoard(props) {
                     <span className="cardH1">{bills.length}</span>
                 </Card>
                 <Card className="cards" style={{width:"65%"}} >
-                    <Select defaultValue={option} style={{ width: 120 }} onSelect={handleChange}>
+                    <Select defaultValue={option} style={{ width: 120 , margin:"5px 5px" }} onSelect={handleChange}>
                         {bills.length && yearlyData().map((ele,i)=>{
                             return <Select.Option key={i} value={ele}>{ele}</Select.Option>
                         })}
                     </Select>
-                    <Select placeholder="Month" style={{ width: 120 }}  onSelect={handleSubChange}>
+                    <Select placeholder="Month"  style={{ width: 120 }}  onSelect={handleSubChange}>
                         <Select.Option value="">Month</Select.Option>
                       {graphData.map((ele)=>{
                           return <Select.Option key={ele.monthId} value={ele.monthId}>{ele.label}</Select.Option>
@@ -200,10 +204,17 @@ function DashBoard(props) {
                                 datasets: [{
                                             label: 'Sales Details',
                                             data: getData("values"),
-                                            fill: false,
-                                            backgroundColor: 'rgb(255,139,91)',
-                                            borderColor: 'rgb(255,139,91,0.2)',
-                                    }]}}/>
+                                            fill: true,
+                                            backgroundColor: '#4190F7',
+                                            borderColor: '#4190F7',
+                                    }]}}
+                                    options={{
+                                        plugins:{
+                                            legend:{
+                                                position:"bottom"
+                                            }
+                                        }
+                                    }}/>
                 </Card>
                 <div style={{width:"30%"}} >
                 <Card title="Analytics" className="cards" style={{width:"100%",marginBottom:"20px"}} >
@@ -228,8 +239,8 @@ function DashBoard(props) {
                 </Card>
                 
                 </div>
-                <Card title="Recent 5 Bills" extra={<Link to="/main/bills">View</Link>} className="cards" style={{width:"65%"}} >
-                    <Table columns={columns} pagination={false} bordered dataSource={data} />
+                <Card title="Recent 5 Bills" extra={<Link to="/main/bills">View</Link>} className="cards" style={{width:"100%"}} >
+                    <Table columns={columns}  pagination={false} bordered dataSource={data} />
                 </Card>
                
                 </div>

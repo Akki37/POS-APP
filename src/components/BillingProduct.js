@@ -23,8 +23,9 @@ function BillingProduct(props) {
             setSearchProduct([])
         }
     }
-        return  (<div className="searchProd">
-                <Input type="text" className="searchInput2"  name="product" value={productName} prefix={<SearchOutlined />} autoComplete="off" placeholder="Search product to add" onChange={handleChange}/>
+        return  (
+        <div className="searchProd">
+                <Input type="text" className="searchInput"  name="product" value={productName} prefix={<SearchOutlined />} autoComplete="off" placeholder="Search product to add" onChange={handleChange}/>
                     {searchProduct.length ? 
                     <Menu className="prod_menu">
                     {searchProduct.map((product)=>{

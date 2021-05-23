@@ -27,10 +27,12 @@ function App(props) {
   return (
     <div className="App">
           <NavBar/>
+
           <Route path="/" exact component={Home}/>
           <Route path="/register"  component={RegisterForm}/>
           <Route path="/login"  component={LogIn}/>
           <Route path="/main" component={MainContainer}/>
+
     </div>
   );
 }

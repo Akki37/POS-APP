@@ -4,6 +4,7 @@ import SideNavBar from './SideNavBar'
 import {Layout} from "antd"
 import swal from '@sweetalert/with-react'
 import { useHistory } from 'react-router'
+import "../stylesheets/MainContainer.css"
 
 
 function MainContainer(props) {
@@ -21,10 +22,8 @@ function MainContainer(props) {
   },[])
     return (
         <div className="mainContainer_box">
-            <Layout>
             <SideNavBar/>
             <LinkContextContainer/>
-            </Layout>
         </div>
     )
 }

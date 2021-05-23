@@ -30,10 +30,10 @@ function Products(props) {
     }
     
     return (
-        <div style={{position:"relative"}}>
+        <div style={{position:"relative",width:"100%"}}>
+            <Search data={products} getSearch={getSearch} placeHolder="Search product by name..."/>
             {id ? <ProductsForm id={id}/> :<ProductsForm/>}
-            <div className="searchDiv2"><Search data={products} getSearch={getSearch} placeHolder="Search product by name..."/></div>
-           {search.length ? search === "empty" ?<ProdcutsTable data={[]}/> : <ProdcutsTable  data={search}/> : <ProdcutsTable  data={products}/>}               
+            {search.length ? search === "empty" ?<ProdcutsTable data={[]}/> : <ProdcutsTable  data={search}/> : <ProdcutsTable  data={products}/>}               
         </div>
     )
 }

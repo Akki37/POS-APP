@@ -18,19 +18,29 @@ function Account(props) {
             })
         }
     },[])
-    const styleDivider = {fontSize:"15px",fontWeight:"600",margin:0,padding:0}
+    const styleDivider = {fontSize:"15px",fontWeight:"600",width:"100%",margin:0,padding:"0 63px"}
     return (
         <div className="account_box">
-            <div className="Account">Account </div>
-            <p className="createdAt">created on-{new Date(account.createdAt).toLocaleDateString()}<br/> last updated -{new Date(account.updatedAt).toLocaleDateString()}</p>
-            <Divider orientation="left" style={styleDivider}>User Name</Divider>
-            <div className="user ">{account.username}</div>
-            <Divider orientation="left" style={styleDivider}>Email</Divider>
-            <div className="user ">{account.email}</div>
-            <Divider orientation="left" style={styleDivider}>Business Name</Divider>
-            <div className="user ">{account.businessName}</div>
-            <Divider orientation="left" style={styleDivider}>Address</Divider>
-            <div className="user ">{account.address}</div>
+            <div className="Account">Account <p className="createdAt">created on-{new Date(account.createdAt).toLocaleDateString()} | last updated -{new Date(account.updatedAt).toLocaleDateString()}</p></div>
+            <div className="data_box">
+                <div className="userTitle ">User Name</div>
+                <div className="userData ">{account.username}</div>
+            </div>
+            <Divider  style={styleDivider}/>
+            <div className="data_box">
+                <div className="userTitle ">Email ID</div>
+                <div className="userData ">{account.email}</div>
+            </div>
+            <Divider  style={styleDivider}/>
+            <div className="data_box">
+                <div className="userTitle ">Business Name</div>
+                <div className="userData ">{account.businessName}</div>
+            </div>
+            <Divider  style={styleDivider}/>
+            <div className="data_box">
+                <div className="userTitle ">Address</div>
+                <div className="userData ">{account.address}</div>
+            </div>
         </div>
     )
 }

@@ -5,8 +5,6 @@ import { Menu,Dropdown,Breadcrumb  } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginDone, reset } from '../Actions/register_loginActions';
 import {UserOutlined,LogoutOutlined} from "@ant-design/icons"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCashRegister} from "@fortawesome/free-solid-svg-icons"
 import "../stylesheets/NavBar.css"
 
 function NavBar(props) {
@@ -25,11 +23,11 @@ function NavBar(props) {
                     dispatch(reset())
                                                }});}
 
-    const seperator = <span style={{color:"white"}}>|</span>
+    const seperator = <span style={{color:"#1A202C"}}>|</span>
 
     return (
         <div className="navbar">
-            <div  className="navBar_heading"><FontAwesomeIcon style={{marginRight:"10px"}} icon={faCashRegister}/>POS</div>
+            <div onClick={()=>{history.push("/")}}  className="navBar_heading">POS</div>
             <div  className="links">
                 { loggedin ? 
                     
@@ -40,16 +38,16 @@ function NavBar(props) {
                                         <Menu.Divider className="divider" />
                                         <Menu.Item  onClick={handleLogout}><LogoutOutlined />Log Out</Menu.Item>              
                                  </Menu>} >
-                        <UserOutlined style={{fontSize:"30px",color:"white",padding:"10px"}}/>
+                        <UserOutlined style={{fontSize:"30px",color:"#4190F7",padding:"10px"}}/>
                         </Dropdown>
                         </div>
                     
                     : 
                         <div className="breadCrumbs">
                             <Link className="link"  to="/">Home</Link>
-                            <Breadcrumb.Separator children={seperator} ></Breadcrumb.Separator>
+                            <Breadcrumb.Separator  children={seperator} ></Breadcrumb.Separator>
                             <Link className="link"  to="/register">Register</Link>
-                            <Breadcrumb.Separator children={seperator} ></Breadcrumb.Separator>
+                            <Breadcrumb.Separator   children={seperator} ></Breadcrumb.Separator>
                             <Link className="link"  to="/login">Login</Link>                
                         </div>
                 }

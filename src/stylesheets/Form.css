@@ -6,15 +6,24 @@
     padding: 15px 0 0;
     justify-content: space-evenly;
 }
-.customerInputs{
- position: relative;
- width: 200px;
- color: gray;
-}
-.errorInForm{
+    .customerInputs{
     position: relative;
-    font-size: 10px;
-    font-weight: 500;
-    padding: 0 10px;
-    color: rgb(226, 59, 59);
-}
+    width: 200px;
+    height: 50px;
+    color: gray;
+    }
+    .errorInForm{
+        position: relative;
+        font-size: 10px;
+        font-weight: 500;
+        padding: 0 10px;
+        color: rgb(226, 59, 59);
+    }
+    .form_submit{
+        background-color: #4190F7;
+        height: 50px;
+    }
+    .cancelBtn{
+     height: 50px;
+     color: #4190F7;
+    }

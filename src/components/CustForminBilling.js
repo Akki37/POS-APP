@@ -112,17 +112,8 @@ function CustForminBilling(props) {
     }
     }
     return (
-        <div style={{position:"relative"}}>
-             <div className="steps_container">
-                <Steps  size="small" progressDot current={steps} className="steps">
-                    <Step />
-                    <Step />
-                    <Step />
-                    <Step />
-                </Steps>
-            </div>
+
             <form onSubmit={handleSubmit}>
-                
                 <div className="addCustForm">
                  <div>  
                 <Input type="text"  className="customerInputs"  prefix={<MobileOutlined />} name="mobile"  autoComplete="off" placeholder="Mobile" value={mobile} onChange={handleMobile} maxLength={10} />
@@ -138,12 +129,13 @@ function CustForminBilling(props) {
                 <Input type="email" disabled={!mobile.length || !name.length}className="customerInputs" name="email" autoComplete="off" placeholder="Email" prefix={<MailOutlined/>}  value={email}  onChange={handleEmail}/>
                 {formError.email ? <p className="error"><WarningOutlined style={{padding:"0 2px 0 0"}}/>{formError.email}</p>:null}
                 </div>
+                <div>
                 { steps === 4  ? <CheckCircleFilled className="checkIcon" />
-                : <Button  type={"primary"} disabled={!name.length || !email.length || !name.length || formError.name || formError.email || formError.mobile} htmlType="submit">Add Customer</Button>}
+                : <Button className="form_submit"  type={"primary"} disabled={!name.length || !email.length || !name.length || formError.name || formError.email || formError.mobile} htmlType="submit">Add Customer</Button>}
+                </div>
                 </div>
             </form>
            
-        </div>
     )
 }
 

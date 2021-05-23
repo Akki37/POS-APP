@@ -1,49 +1,48 @@
-.homePage{
+.carousel_fluid{
     width: 100%;
     position: relative;
+    padding: 0 20px;
+    background:linear-gradient(180deg, #FFFFFF 15.18%, rgba(196, 213, 255, 0.698) 100%);
 }
 .img_box{
-position: relative;
-width: 100%;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+
 }
 .img_box_text{
-    position: absolute;
-    width: 50%;
-    z-index: 1;
-    top: 50%;
+    position: relative;
+    width: 45%;
+}
+.text_box{
+    margin: 55% 0 0;
     transform: translateY(-50%);
-    margin: 0 0 0 80px;
+    padding: 0 80px;
 }
 .textH1{
     position: relative;
     width: 100%;
-    font-size: 65px;
+    font-size: 54px;
     font-weight: 760;
-    padding: 10px 20px 0;
+    color: #1A202C;
+    font-family: "Open Sans";
     margin: 0;
-    color: rgb(255,139,91);
-
-    letter-spacing: 5px;
 }.textP{
     position: relative;
-    width: 90%;
-    font-size: 25px;
-    padding: 10px 20px 0;
-    letter-spacing: 3px;
-    line-height: 1;
-    color: rgb(95,95,95);
-
-}
-.btn_box{
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    width: 60%;
+    width: 100%;
+    font-size: 28px;
+    color: #4A5568;
+    margin: 0;
 }
 .img1{
     position: relative;
-    width: 70%;
-    left: 30%;
+    width: 55%;
+}
+.IMG{
+    padding: 20px;
+    margin-top: 50%;
+    transform: translateY(-50%);
 }
 .img2{
     position: relative;

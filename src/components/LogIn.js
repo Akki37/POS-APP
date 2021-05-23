@@ -76,7 +76,9 @@ function LogIn(props) {
               initialValues={initialValues}
                    onSubmit={onSubmit}
            validationSchema={validationSchema}>
-               <Form style={{width:"30%"}}>
+               {(formik)=>{
+                   return(
+                    <Form style={{width:"30%"}}>
                    <Field   name="email">
                    {({field})=><Input className="login_input" {...field} autoComplete="off" prefix={<MailOutlined  className="site-form-item-icon" />} placeholder="Enter Your Email"  />}
                    </Field>
@@ -90,10 +92,13 @@ function LogIn(props) {
                        {err => <div className="login_error">{err}</div>}
                    </ErrorMessage>
                    <div className="login_button">
-                   <Button type="primary" htmlType="submit">Log In</Button>
+                   <Button type="primary" disabled={!formik.isValid || !formik.dirty} htmlType="submit">Log In</Button>
                    <div className="account_note">Don't have an account? <Link to="/register" className="regis_link_in_login">Register Now</Link> </div>
                    </div>
                </Form>
+                   )
+               }}
+               
            </Formik>
            </div>
         </div>

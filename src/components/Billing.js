@@ -113,11 +113,9 @@ function Billing(props) {
         }
     return (
         <div>
-            <CustForminBilling />
-            <div className="search_N_Add">
             <BillingProduct   BillingObjects={BillingObjects}  Sno={addProduct.length}/>             
-            </div>
-            <Table columns={columns}  bordered dataSource={Data()} pagination={false} style={{maxHeight:"500px"}} scroll={{y:"500px"}}
+            <CustForminBilling/>
+            <Table columns={columns}  bordered dataSource={Data()} pagination={false} style={{maxHeight:"500px"}} scroll={{y:"390px"}}
              footer={pageData => {
                 let totalItems = 0;
                 let totalAmount = 0;

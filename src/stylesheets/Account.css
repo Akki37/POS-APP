@@ -1,11 +1,8 @@
 .account_box{
 position: relative;
 background-color: white;
-width: 98%;
-border-radius: 10px;
-margin: 10px 1%;
-padding: 10px 0 20px;
-box-shadow: 5px 5px 10px rgba(88, 88, 88, 0.664) ;
+width: 100%;
+padding: 10px 63px ;
 }
 
 .Account{
@@ -13,10 +10,10 @@ box-shadow: 5px 5px 10px rgba(88, 88, 88, 0.664) ;
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    height: 97px;
     font-size: 40px;
-    color: rgb(255,139,91);
-    font-weight: bold;
+    color: #1A202C;
+    font-weight: 400;
 }
 .createdAt{
     position: relative;
@@ -30,13 +27,31 @@ box-shadow: 5px 5px 10px rgba(88, 88, 88, 0.664) ;
     color:rgb(197, 70, 15) ;
 
 }
-.user{
+.data_box{
+    position: relative;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+.userTitle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 70px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #1A202C;
+}
+.userData{
 position: relative;
 display: flex;
 align-items: center;
-width: 100%;
-min-height: 50px;
-font-size: 30px;
-padding: 0 100px;
-color: rgb(255,139,91);
+justify-content: flex-end;
+width: 50%;
+height: 70px;
+font-size: 24px;
+font-weight: 700;
+color: #1A202C;
 }

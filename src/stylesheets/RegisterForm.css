@@ -1,7 +1,7 @@
 .registerForm_box{
     position: relative;
     width: 100%;
-    padding: 100px 0 0;
+    padding: 50px 0 0;
 }
 .register_title{
     position: relative;
@@ -55,7 +55,7 @@
     outline: none;
     border: none;
     border-radius: 5px;
-    background-color: rgb(43,122,226);
+    background-color: #4190F7;
     color: white;
     font-size: 15px;
     letter-spacing: 2px;
@@ -64,8 +64,13 @@
 .register_button button:hover{
     background-color: rgb(29, 114, 226);
 }
+.register_button button:disabled{
+    background-color: rgba(170, 170, 170, 0.753);
+    color:white ;
+}
 .account_note{
     position: relative;
+    margin: 36px 0 0;
     width: 100%;
     display: flex;
     font-size: 15px;
@@ -77,7 +82,7 @@
 .login_link_in_regis{
     position: relative;
     cursor: pointer;
-    color: #4F6AEE;
+    color: #4190F7;
     font-size: 15px;
     padding: 0 10px;
     text-decoration: none;

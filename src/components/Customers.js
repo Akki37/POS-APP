@@ -29,8 +29,8 @@ function Customers(props) {
     
     return (
         <div style={{position:"relative"}}>
+            <Search data={customers} getSearch={getSearch} placeHolder="Search customer by name/mobile..."/>
             <CustomerForm />
-            <div className="searchDiv"><Search data={customers} getSearch={getSearch} placeHolder="Search customer by name/mobile..."/></div>
             {search.length ? search === "empty" ?
              <CustomersTable data={[]}/> : <CustomersTable  data={search}/> : <CustomersTable  data={customers}/>}
             

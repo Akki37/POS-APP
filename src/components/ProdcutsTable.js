@@ -53,7 +53,7 @@ function ProdcutsTable(props) {
         const footer = ()=> <div style={{fontWeight:"bold",fontSize:"30px",letterSpacing:"2px",fontVariant:"small-caps"}}>Total Products:{Products.length}</div>
     return  (
         <>
-        <Table columns={columns} bordered dataSource={tableData} pagination={true} scroll={{y:"450px"}} 
+        <Table columns={columns} bordered dataSource={tableData} pagination={true} scroll={{y:"380px"}} 
         footer={footer}/>
         <Route path="/main/products/modal/:id" component={ProdModal}/>
         </>

@@ -29,7 +29,7 @@ function Bills(props) {
    
     return (
         <div>
-            <div className="search_n_Nobtn"><Search data={bills} getSearch={getSearch}  clue="bill" placeHolder="Search bill by name/mobile..."/></div>
+            <Search data={bills} getSearch={getSearch}  clue="bill" placeHolder="Search bill by name/mobile..."/>
             {search.length ? search === "empty" ? <BillsTable data={[]}/> : <BillsTable data={search}/> : <BillsTable data={bills}/>}
         </div>
     )
