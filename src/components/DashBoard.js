@@ -204,9 +204,9 @@ function DashBoard(props) {
                                 datasets: [{
                                             label: 'Sales Details',
                                             data: getData("values"),
-                                            fill: true,
+                                            fill:true,
                                             backgroundColor: '#4190F7',
-                                            borderColor: '#4190F7',
+                                            borderColor: '#70a6ec',
                                     }]}}
                                     options={{
                                         plugins:{

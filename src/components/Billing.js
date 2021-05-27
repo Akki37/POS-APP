@@ -135,7 +135,7 @@ function Billing(props) {
                         </div>
                         <hr style={{border:"1px solid gray",borderRadius:"50%"}}/>
                         <div style={{display:"flex",justifyContent:"flex-end"}} >
-                        {!billingCustomer._id || !addProduct.length ? <Button type="ghost" >Generate Bill</Button> : <Button type="primary" onClick={postBill}>Generate Bill</Button>  }</div>
+                        {!billingCustomer._id || !addProduct.length ? <Button type="ghost"  >Generate Bill</Button> : <Button type="primary" disabled={true} onClick={postBill}>Generate Bill</Button>  }</div>
                     </div>
                     );
                 }}

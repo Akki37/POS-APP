@@ -14,6 +14,7 @@
 .img_box_text{
     position: relative;
     width: 45%;
+
 }
 .text_box{
     margin: 55% 0 0;
@@ -34,6 +35,31 @@
     font-size: 28px;
     color: #4A5568;
     margin: 0;
+}
+.cred_box{
+    position: relative;
+    padding: 0 80px;
+}
+.dummyCred_box{
+    position: relative;
+    background-color: #F7F9FF;
+    border: 2px solid #DFE8FF;
+    border-radius: 10px;
+    padding: 21px 25px;
+}
+.dummyText{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #5D72A6;
+}
+.dummyCredTitle{
+    padding: 5px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+    color: #4A5568;
+
 }
 .img1{
     position: relative;
