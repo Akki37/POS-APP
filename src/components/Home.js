@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react'
-import {Carousel} from "antd"
-import {ArrowRightOutlined} from "@ant-design/icons"
 import "../stylesheets/Home.css"
 import { useHistory } from 'react-router'
 function Home(props){
