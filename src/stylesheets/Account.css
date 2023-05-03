@@ -1,0 +1,57 @@
+.account_box{
+position: relative;
+background-color: white;
+width: 100%;
+padding: 10px 63px ;
+}
+
+.Account{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 97px;
+    font-size: 40px;
+    color: #1A202C;
+    font-weight: 400;
+}
+.createdAt{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 10px;
+    padding: 0 20px;
+    color:rgb(197, 70, 15) ;
+
+}
+.data_box{
+    position: relative;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+.userTitle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 70px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #1A202C;
+}
+.userData{
+position: relative;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+width: 50%;
+height: 70px;
+font-size: 24px;
+font-weight: 700;
+color: #1A202C;
+}

@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-width: 1200px;
+  height: 100vh;
+}
+*{
+  box-sizing: border-box;
+ font-family: "Open Sans";
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+

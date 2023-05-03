@@ -1,0 +1,63 @@
+.navbar{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 0 100px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navBar_heading{
+    position: relative;
+    width: 170px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: #4190F7;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Revalia"
+}
+.links{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.account{
+    position:relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    transition: box-shadow 500ms;
+}
+.account:hover{
+    box-shadow: 1px 1px 10px #4190f7bb;
+}
+.divider{
+    padding: 0;
+    margin: 0;
+}
+.menuItem{
+    width: 120px;
+}
+.breadCrumbs{
+    position: relative;
+    display: flex;
+    width: 381px;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    font-size: 15px;
+}
+
+.link{
+    color: #1A202C;
+    font-weight: 500;
+}
+

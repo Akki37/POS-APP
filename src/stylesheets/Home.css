@@ -1,0 +1,98 @@
+.carousel_fluid{
+    width: 100%;
+    position: relative;
+    padding: 0 20px;
+    background:linear-gradient(180deg, #FFFFFF 15.18%, rgba(196, 213, 255, 0.698) 100%);
+}
+.img_box{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+
+}
+.img_box_text{
+    position: relative;
+    width: 45%;
+
+}
+.text_box{
+    margin: 55% 0 0;
+    transform: translateY(-50%);
+    padding: 0 80px;
+}
+.textH1{
+    position: relative;
+    width: 100%;
+    font-size: 54px;
+    font-weight: 760;
+    color: #1A202C;
+    font-family: "Open Sans";
+    margin: 0;
+}.textP{
+    position: relative;
+    width: 100%;
+    font-size: 28px;
+    color: #4A5568;
+    margin: 0;
+}
+.cred_box{
+    position: relative;
+    padding: 0 80px;
+}
+.dummyCred_box{
+    position: relative;
+    background-color: #F7F9FF;
+    border: 2px solid #DFE8FF;
+    border-radius: 10px;
+    padding: 21px 25px;
+}
+.dummyText{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #5D72A6;
+}
+.dummyCredTitle{
+    padding: 5px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+    color: #4A5568;
+
+}
+.img1{
+    position: relative;
+    width: 55%;
+}
+.IMG{
+    padding: 20px;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+.img2{
+    position: relative;
+    width: 70%;
+}
+.img_box_text2{
+    position: absolute; 
+    width: 50%;
+    left: 50%;
+    z-index: 1;
+    top:40%;
+    transform: translateY(-50%);
+}
+.textP2{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    height: 100px;
+    padding: 10px 20px 10px;
+    margin-top: 30px;
+    letter-spacing: 3px;
+    line-height: 1;
+    color: rgb(255,139,91);
+}
