@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link, useHistory} from "react-router-dom"
-import swal from 'sweetalert'
+import SweetAlert2 from 'sweetalert'
 import { Menu,Dropdown,Breadcrumb  } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginDone, reset } from '../Actions/register_loginActions';
@@ -13,11 +13,11 @@ function NavBar(props) {
     const history = useHistory()
 
     const handleLogout =()=>{
-        swal({text:"You want to log out",icon:"warning",buttons:["No","Yes"],dangerMode:true })
+        SweetAlert2({text:"You want to log out",icon:"warning",buttons:["No","Yes"],dangerMode:true })
         .then((value)=>{
             if(value){
                     localStorage.removeItem("pos_token")
-                    swal({ text:"Logged Out", icon:"success",timer:1000,buttons:false })
+                    SweetAlert2({ text:"Logged Out", icon:"success",timer:1000,buttons:false })
                     dispatch(loginDone(false))
                     history.push("/login")
                     dispatch(reset())
